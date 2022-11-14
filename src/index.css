@@ -65,7 +65,7 @@ h1::before {
 img {
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
-  max-height: 350px;
+  max-height: 340px;
   width: 100%;
   object-fit: cover;
 }
@@ -77,15 +77,17 @@ img {
 .item-title-div {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .item-title {
+  font-size: 1rem;
   color: rgb(89, 89, 89);
 }
 
 .item-price {
   color: rgb(10, 140, 45);
+  font-size: 1rem;
   background-color: var(--bgColor);
   padding: 3px 10px;
 }
@@ -99,7 +101,7 @@ img {
   color: rgb(250, 106, 106);
   background: transparent;
   text-transform: capitalize;
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 2px 40px;
   border: 2px solid rgb(250, 106, 106);
   border-radius: 3px;

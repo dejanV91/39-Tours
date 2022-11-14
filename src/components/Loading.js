@@ -6,6 +6,17 @@ const Loading = () => {
   const [isError, setIsError] = useState(false);
   const [users, setUsers] = useState([]);
 
+  const deleteItem = (id) => {
+    const newUsers = users.filter((user) => {
+      if (user.id !== id) {
+        return user;
+      } else {
+        return false;
+      }
+    });
+    setUsers(newUsers);
+  };
+
   useEffect(() => {
     fetch(url)
       .then((response) => {
@@ -58,8 +69,10 @@ const Loading = () => {
                     <h3 className="item-title">{name}</h3>
                     <h3 className="item-price">${price}</h3>
                   </div>
-                  <p className="desription">{info}</p>
-                  <button className="no-btn">not interested</button>
+                  <p className="desription">{info.substring(0, 200)}</p>
+                  <button className="no-btn" onClick={() => deleteItem(id)}>
+                    not interested
+                  </button>
                 </div>
               </article>
             );
