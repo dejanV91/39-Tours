@@ -1,11 +1,11 @@
 import React from "react";
-import Setup from "./components/setup";
+import Loading from "./components/Loading";
 
 function App() {
   return (
     <div className="container">
       <main>
-        <Setup />
+        <Loading />
       </main>
     </div>
   );
