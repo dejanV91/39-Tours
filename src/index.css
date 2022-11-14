@@ -11,14 +11,37 @@ html {
 
 :root {
   --bgColor: rgb(226, 253, 224);
+  --fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --titleColor: rgb(68, 68, 68);
 }
 
 body {
   background-color: var(--bgColor);
   min-height: 100vh;
+  font-family: var(--fontFamily);
 }
 
 main {
   width: 45%;
   margin: 100px auto;
+}
+
+section {
+  text-align: center;
+}
+
+h1 {
+  position: relative;
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: var(--titleColor);
+}
+
+h1::before {
+  content: " ";
+  height: 4px;
+  width: 50%;
+  background-color: aqua;
+  position: absolute;
+  bottom: 0;
 }
