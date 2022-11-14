@@ -13,6 +13,7 @@ html {
   --bgColor: rgb(226, 253, 224);
   --fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --titleColor: rgb(68, 68, 68);
+  --darkGreen: rgb(2, 80, 18);
 }
 
 body {
@@ -31,17 +32,23 @@ section {
 }
 
 h1 {
+  white-space: nowrap;
   position: relative;
   font-size: 3rem;
   text-transform: capitalize;
   color: var(--titleColor);
+  display: flex;
+  justify-content: center;
+  display: inline-table;
 }
 
 h1::before {
   content: " ";
   height: 4px;
   width: 50%;
-  background-color: aqua;
+  background-color: var(--darkGreen);
   position: absolute;
   bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
 }
