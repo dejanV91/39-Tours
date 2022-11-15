@@ -141,3 +141,10 @@ img {
 .refresh-btn:hover {
   box-shadow: rgba(9, 99, 1, 0.5) 0 3px 8px;
 }
+
+.show-more {
+  cursor: pointer;
+  color: #09bb03;
+  padding: 2px 10px;
+  text-transform: capitalize;
+}

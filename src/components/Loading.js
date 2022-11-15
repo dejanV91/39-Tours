@@ -5,6 +5,7 @@ const Loading = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const [users, setUsers] = useState([]);
+  const [show, setShow] = useState(false);
 
   const deleteItem = (id) => {
     const newUsers = users.filter((user) => {
@@ -17,7 +18,28 @@ const Loading = () => {
     setUsers(newUsers);
   };
 
-  const refershAllItems = () => {};
+  const refershAllItems = () => {
+    fetch(url)
+      .then((response) => {
+        if (response.status >= 200 && response.status <= 299) {
+          return response.json();
+        } else {
+          setIsLoading(false);
+          setIsError(true);
+          throw new Error(response.statusText);
+        }
+      })
+      .then((data) => {
+        setIsLoading(false);
+        setUsers(data);
+        return data;
+      })
+      .catch((error) => {
+        setIsLoading(false);
+        setIsError(true);
+        console.log(error);
+      });
+  };
 
   useEffect(() => {
     fetch(url)
@@ -84,7 +106,12 @@ const Loading = () => {
                     <h3 className="item-title">{name}</h3>
                     <h3 className="item-price">${price}</h3>
                   </div>
-                  <p className="desription">{info.substring(0, 200)}</p>
+                  <p className="desription">
+                    {!show ? info.substring(0, 200) : info}
+                    <span className="show-more" onClick={() => setShow(!show)}>
+                      ... {!show ? "show more" : "show less"}
+                    </span>
+                  </p>
                   <button className="no-btn" onClick={() => deleteItem(id)}>
                     not interested
                   </button>
