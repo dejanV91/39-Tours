@@ -32,6 +32,12 @@ section {
   text-align: center;
 }
 
+.loading {
+  font-size: 3.5rem;
+  color: var(--titleColor);
+  text-transform: capitalize;
+}
+
 h1 {
   white-space: nowrap;
   position: relative;
