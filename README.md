@@ -2,7 +2,7 @@
 
 Tours with React<br>
 <br>
-Demo: **[Tours](https://dejanv91.github.io/38-Birthday-Reminder/)**
+Demo: **[Tours](https://dejanv91.github.io/39-Tours/)**
 
 ## Frameworks:
 * JavaScript: **React.js**
