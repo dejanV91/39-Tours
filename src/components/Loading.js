@@ -17,6 +17,8 @@ const Loading = () => {
     setUsers(newUsers);
   };
 
+  const refershAllItems = () => {};
+
   useEffect(() => {
     fetch(url)
       .then((response) => {
@@ -53,6 +55,18 @@ const Loading = () => {
       </section>
     );
   }
+  if (users.length === 0) {
+    return (
+      <section>
+        <h1>no tours left</h1>
+        <div className="article-divs">
+          <button className="refresh-btn" onClick={() => refershAllItems()}>
+            refresh
+          </button>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <>
@@ -61,6 +75,7 @@ const Loading = () => {
         <div className="article-divs">
           {users.map((user) => {
             const { id, image, info, name, price } = user;
+
             return (
               <article className="single-item" id={id} key={id}>
                 <img src={image} alt={name} />

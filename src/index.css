@@ -25,7 +25,7 @@ body {
 main {
   width: 45%;
   margin: 70px auto;
-  min-width: 620px;
+  width: 620px;
 }
 
 section {
@@ -106,4 +106,38 @@ img {
   border: 2px solid rgb(250, 106, 106);
   border-radius: 3px;
   cursor: pointer;
+}
+
+.refresh-btn {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #31ff31, #088404);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, -apple-system, system-ui, Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  text-transform: capitalize;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 20%;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow 0.2s;
+}
+
+.refresh-btn:hover {
+  box-shadow: rgba(9, 99, 1, 0.5) 0 3px 8px;
 }
