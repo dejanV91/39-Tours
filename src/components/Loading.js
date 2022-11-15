@@ -108,9 +108,13 @@ const Loading = () => {
                   </div>
                   <p className="desription">
                     {!show ? info.substring(0, 200) : info}
-                    <span className="show-more" onClick={() => setShow(!show)}>
+
+                    <button
+                      className="show-more"
+                      onClick={() => setShow(!show)}
+                    >
                       ... {!show ? "show more" : "show less"}
-                    </span>
+                    </button>
                   </p>
                   <button className="no-btn" onClick={() => deleteItem(id)}>
                     not interested
